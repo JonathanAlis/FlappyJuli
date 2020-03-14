@@ -9,7 +9,7 @@ public class MenuJuli : MonoBehaviour
     Transform wing1,wing2;
     Quaternion wingRotation1,wingRotation2;
     float timer, aniTimer;
-    public float spd=2;
+    public float spd=25;
     Vector3 orScale;
     Animator faceAni;
     // Start is called before the first frame update
@@ -63,8 +63,7 @@ public class MenuJuli : MonoBehaviour
         //Debug.Log(transform.position.y);
         if (transform.position.y<=startPosY){
             timer=1/spd;
-            juli.velocity=Vector2.up * 5;            
-                        
+            juli.velocity=Vector2.up * 5;                                    
         }
         if (timer<1/spd && timer>0){
             wing1.localRotation = Quaternion.Lerp(wing1.rotation, wingRotation1, spd*timer);
