@@ -15,7 +15,10 @@ public class HairMotion : MonoBehaviour
     public float weightSpeedY = 1f;
     public float weightAccY = 1f;
     public float windX, windY;
-    public float glassesMove, glassPos;
+    [SerializeField]
+    private float glassesMove=0.002f; 
+    [SerializeField]
+    private float glassPos=0.05f;
     // Start is called before the first frame update
     int i;
     void Start()

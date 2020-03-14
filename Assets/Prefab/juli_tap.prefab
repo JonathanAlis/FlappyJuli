@@ -271,12 +271,12 @@ PrefabInstance:
     - target: {fileID: 7341154249068616187, guid: d13dd481008f1cf4f9f84b7e19e7aa58,
         type: 3}
       propertyPath: wingSpeed
-      value: 5
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 7341154249068616187, guid: d13dd481008f1cf4f9f84b7e19e7aa58,
         type: 3}
       propertyPath: wingSpeed2
-      value: 5
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 8280633619407004001, guid: d13dd481008f1cf4f9f84b7e19e7aa58,
         type: 3}

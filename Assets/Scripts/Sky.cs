@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Sky : MonoBehaviour
 {
+    public GameObject background;
+    public GameObject ground;
     public GameObject starsPrefab;
     List<GameObject> starsCopies;
     GameObject comet;
@@ -18,9 +20,12 @@ public class Sky : MonoBehaviour
         starsCopies= new List<GameObject>();
         GameObject s1=Instantiate(starsPrefab,new Vector3(-18,Random.Range(-0.1f,0.2f),0),Quaternion.identity);
         GameObject s2=Instantiate(starsPrefab,new Vector3(0,Random.Range(-0.1f,0.2f),0),Quaternion.identity);
+        GameObject s3=Instantiate(starsPrefab,new Vector3(18,Random.Range(-0.1f,0.2f),0),Quaternion.identity);
+
         starsCopies.Add(s1);
         starsCopies.Add(s2);
-                    randomizeComet();
+        starsCopies.Add(s3);
+        randomizeComet();
 
     }
     void randomizeComet(){
@@ -45,7 +50,7 @@ public class Sky : MonoBehaviour
         foreach(GameObject st in starsCopies){
             if (st!=null){
                 st.transform.position=new Vector3(st.transform.position.x + starsSpeed * Time.deltaTime,st.transform.position.y,0);
-                if (st.transform.position.x<-18){
+                if (st.transform.position.x<-36){
                     st.transform.position=new Vector3(18,Random.Range(-0.1f,0.2f),0);
                     break;
                 }
