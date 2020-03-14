@@ -9,7 +9,7 @@ public class MenuJuli : MonoBehaviour
     Transform wing1,wing2;
     Quaternion wingRotation1,wingRotation2;
     float timer, aniTimer;
-    public float spd=25;
+    public float spd=2;
     Vector3 orScale;
     Animator faceAni;
     // Start is called before the first frame update
@@ -60,6 +60,9 @@ public class MenuJuli : MonoBehaviour
             }
             aniTimer=20f;
         }
+    }
+    void FixedUpdate()
+    {        
         //Debug.Log(transform.position.y);
         if (transform.position.y<=startPosY){
             timer=1/spd;

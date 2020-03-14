@@ -898,17 +898,17 @@ PrefabInstance:
     - target: {fileID: 131722029034914524, guid: 99de232590730155a897a6069782e414,
         type: 3}
       propertyPath: tiltSmooth
-      value: 1
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 131722029034914524, guid: 99de232590730155a897a6069782e414,
         type: 3}
       propertyPath: wingSpeed2
-      value: 50
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 131722029034914524, guid: 99de232590730155a897a6069782e414,
         type: 3}
       propertyPath: wingSpeed
-      value: 50
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3858621291242677780, guid: 99de232590730155a897a6069782e414,
         type: 3}

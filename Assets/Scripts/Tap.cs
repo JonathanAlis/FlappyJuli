@@ -8,9 +8,9 @@ using UnityEngine.SceneManagement;
 public class Tap : MonoBehaviour
 {
     public float tapForce = 10f;
-    public float tiltSmooth = 1.2f;
-    public float wingSpeed = 50f;
-    public float wingSpeed2 = 50f;
+    public float tiltSmooth = 0.05f;
+    public float wingSpeed = 10f;
+    public float wingSpeed2 = 10f;
     
 
     public Vector3 startPos;
@@ -50,7 +50,7 @@ public class Tap : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {        
         lastVel= curVel;
         curVel=rigidbody.velocity.y;
@@ -82,7 +82,7 @@ public class Tap : MonoBehaviour
             }else{
             //transform.position=new Vector3(transform.position.x -3 * Time.deltaTime,transform.position.y,0);
         }
-    }
+    }    
     void OnTriggerEnter2D(Collider2D col)
     {
         animator.SetInteger("random",Random.Range(0,2));
