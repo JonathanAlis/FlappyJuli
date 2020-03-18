@@ -17,6 +17,7 @@ public class Manager : MonoBehaviour
         if(highscore>0){
             scoretext.text="High Score: "+highscore;
         }
+        
     }
 
     // Update is called once per frame
@@ -25,6 +26,7 @@ public class Manager : MonoBehaviour
         
     }
     public void LoadGame(){
+        Debug.Log("starting the game!!!");
         SceneManager.LoadScene("Game");
     }
 }

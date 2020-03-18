@@ -7,6 +7,11 @@ using UnityEngine.SceneManagement;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Tap : MonoBehaviour
 {
+
+    public delegate void juliDead();
+    public static event juliDead OnDead;
+    public delegate void afterDead();
+    public static event juliDead OnAfterDead;
     public float tapForce = 10f;
     public float tiltSmooth = 0.05f;
     [SerializeField] 
@@ -23,9 +28,15 @@ public class Tap : MonoBehaviour
     public bool isAlive;
     public int score;
     public Text scoreText;
+    public Text gameoverText;
     public int deadJulis;
     bool gamover;
-
+    float gamoverTimer;
+    public AudioSource juliAudio;
+    public AudioClip eee;
+    public AudioClip droaga;
+    public AudioClip flap;
+    public AudioManager juliSounds;
     void Start()
     {
         rigidbody = GetComponent<Rigidbody2D>();
@@ -38,10 +49,15 @@ public class Tap : MonoBehaviour
         animator=GetComponent<Animator>();
         isAlive=true;
         scoreText = transform.GetChild(4).GetChild(0).GetComponent<Text>();
+        gameoverText = transform.GetChild(4).GetChild(1).GetComponent<Text>();
         deadJulis=PlayerPrefs.GetInt("deadjulis",0);
         transform.position=Camera.main.ScreenToWorldPoint(new Vector3(Screen.width/4,Screen.height/2,0))+new Vector3(0,0,10);
         headTimer=0f;
         wingTimer=0f;
+        gamover=false;
+        gamoverTimer=2.3f;
+        gameoverText.enabled=false;
+        
     }
 
     // Update is called once per frame
@@ -54,9 +70,24 @@ public class Tap : MonoBehaviour
                 rigidbody.AddForce(Vector2.up * tapForce, ForceMode2D.Force);
                 animator.SetBool("flapped",true);
                 headTimer=0f;
+                FindObjectOfType<AudioManager>().Play("flap");
             }
             
-        }        
+        } 
+        if (gamover){
+            gamoverTimer-=Time.deltaTime;
+            if (gamoverTimer<0){                        
+                if (score>PlayerPrefs.GetInt("highscore",0)){
+                    PlayerPrefs.SetInt("highscore",score);
+                }
+                deadJulis++;
+                PlayerPrefs.SetInt("deadjulis",deadJulis);
+
+                SceneManager.LoadScene("MainMenu");
+                if (OnAfterDead!=null)
+                    OnAfterDead();
+            }            
+        }       
     }
 
     void FixedUpdate()
@@ -87,18 +118,6 @@ public class Tap : MonoBehaviour
     }    
     void LateUpdate()
     {
-        animator.SetFloat("yspd",rigidbody.velocity.y);
-        if (gamover){
-            if (score>PlayerPrefs.GetInt("highscore",0)){
-                PlayerPrefs.SetInt("highscore",score);
-            }
-            deadJulis++;
-            PlayerPrefs.SetInt("deadjulis",deadJulis);
-
-            SceneManager.LoadScene("MainMenu");
-            //rigidbody.simulated = false;
-            //transform.rotation = Quaternion.identity;            
-        }
     }
     void OnTriggerEnter2D(Collider2D col)
     {
@@ -110,7 +129,8 @@ public class Tap : MonoBehaviour
             animator.SetBool("scored",true);   
             score++;
             scoreText.text=""+score;    
-            col.enabled=false;                 
+            col.enabled=false;  
+            FindObjectOfType<AudioManager>().Play("eee");
         }
         if (col.gameObject.tag == "DeadZoneTag"){
             isAlive=false;
@@ -118,11 +138,17 @@ public class Tap : MonoBehaviour
             //rigidbody.simulated = false;
             //transform.rotation = Quaternion.identity;
             col.isTrigger=false;
+            FindObjectOfType<AudioManager>().Play("droaga");
         }
         if (col.gameObject.tag == "GameOverZoneTag"){
             Debug.Log("gameover");
             animator.SetBool("gamover",true);
             gamover=true;
+            if (OnDead!=null)
+                OnDead();
+            gameoverText.enabled=true;
+            FindObjectOfType<AudioManager>().Stop("adventiny");
+            FindObjectOfType<AudioManager>().Play("dead");
         }
         
     }

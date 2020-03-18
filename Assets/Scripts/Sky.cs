@@ -13,6 +13,7 @@ public class Sky : MonoBehaviour
     public float starsSpeed=-5;
     public float cometSpeedX=8;
     public float cometSpeedY=0;
+    public bool stop;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +28,7 @@ public class Sky : MonoBehaviour
         starsCopies.Add(s3);
         randomizeComet();
 
+        stop=false;
     }
     void randomizeComet(){
         cometSpeedX=Random.Range(5.0f,11f);
@@ -43,18 +45,32 @@ public class Sky : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        comet.transform.position=new Vector3(comet.transform.position.x + cometSpeedX * Time.deltaTime,comet.transform.position.y+cometSpeedY* Time.deltaTime,0);
-        if (comet.transform.position.x>25){
-            randomizeComet();
-        }
-        foreach(GameObject st in starsCopies){
-            if (st!=null){
-                st.transform.position=new Vector3(st.transform.position.x + starsSpeed * Time.deltaTime,st.transform.position.y,0);
-                if (st.transform.position.x<-36){
-                    st.transform.position=new Vector3(18,Random.Range(-0.1f,0.2f),0);
-                    break;
+        if (!stop){
+            comet.transform.position=new Vector3(comet.transform.position.x + cometSpeedX * Time.deltaTime,comet.transform.position.y+cometSpeedY* Time.deltaTime,0);
+            if (comet.transform.position.x>25){
+                randomizeComet();
+            }
+            foreach(GameObject st in starsCopies){
+                if (st!=null){
+                    st.transform.position=new Vector3(st.transform.position.x + starsSpeed * Time.deltaTime,st.transform.position.y,0);
+                    if (st.transform.position.x<-36){
+                        st.transform.position=new Vector3(18,Random.Range(-0.1f,0.2f),0);
+                        break;
+                    }
                 }
             }
         }
+    }
+
+    void Stop(){
+        stop=true;
+    }
+    void OnEnable()
+    {
+        Tap.OnDead+=Stop;    
+    }
+    void OnDisable()
+    {
+        Tap.OnDead-=Stop;    
     }
 }
