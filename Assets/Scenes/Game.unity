@@ -914,10 +914,40 @@ PrefabInstance:
       propertyPath: wingSpeed
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 816964437522552264, guid: 99de232590730155a897a6069782e414,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 816964437522552264, guid: 99de232590730155a897a6069782e414,
+        type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3858621291242677780, guid: 99de232590730155a897a6069782e414,
         type: 3}
       propertyPath: m_Name
       value: juli_tap
+      objectReference: {fileID: 0}
+    - target: {fileID: 5987241400844467224, guid: 99de232590730155a897a6069782e414,
+        type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5987241400844467224, guid: 99de232590730155a897a6069782e414,
+        type: 3}
+      propertyPath: m_FontData.m_HorizontalOverflow
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5987241400844467224, guid: 99de232590730155a897a6069782e414,
+        type: 3}
+      propertyPath: m_FontData.m_VerticalOverflow
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5987241400844467224, guid: 99de232590730155a897a6069782e414,
+        type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6706343438235040810, guid: 99de232590730155a897a6069782e414,
         type: 3}
@@ -973,6 +1003,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7388778518952777341, guid: 99de232590730155a897a6069782e414,
+        type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7388778518952777341, guid: 99de232590730155a897a6069782e414,
+        type: 3}
+      propertyPath: m_ScreenMatchMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7388778518952777341, guid: 99de232590730155a897a6069782e414,
+        type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 720
+      objectReference: {fileID: 0}
+    - target: {fileID: 7388778518952777341, guid: 99de232590730155a897a6069782e414,
+        type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 7388778518952777341, guid: 99de232590730155a897a6069782e414,
+        type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7388778518952777341, guid: 99de232590730155a897a6069782e414,
+        type: 3}
+      propertyPath: m_ReferencePixelsPerUnit
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 8873186958418043708, guid: 99de232590730155a897a6069782e414,
         type: 3}
