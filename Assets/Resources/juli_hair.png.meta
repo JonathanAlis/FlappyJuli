@@ -54,7 +54,7 @@ TextureImporter:
       213: -682464850567169498
     second: juli_hair_16
   externalObjects: {}
-  serializedVersion: 10
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -74,6 +74,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -83,8 +85,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -105,9 +107,13 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -527,6 +533,24 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      juli_hair_11: -6406458168551830063
+      juli_hair_6: -3853294269044222804
+      juli_hair_3: 5687938104265681635
+      juli_hair_10: 1327462091467421861
+      juli_hair_5: -3898425614926524422
+      juli_hair_13: -3616937287621600574
+      juli_hair_14: 6215552068176426043
+      juli_hair_7: 5633814572760816989
+      juli_hair_12: 8141092895174233101
+      juli_hair_16: -682464850567169498
+      juli_hair_8: -7080213035516010424
+      juli_hair_2: -869432682213867211
+      juli_hair_15: -72000639399718988
+      juli_hair_1: 8682290653826513950
+      juli_hair_9: -6905215133714267236
+      juli_hair_4: -1651511866870712987
+      juli_hair_0: 4786103023952483505
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

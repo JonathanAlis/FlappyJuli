@@ -147,7 +147,7 @@ TextureImporter:
       213: -6640242948295555814
     second: juli_faces_31
   externalObjects: {}
-  serializedVersion: 10
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -167,6 +167,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -176,8 +178,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -198,9 +200,13 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -269,7 +275,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: d7fa5888661e11a00800000000000000
-      internalID: 725608845476736893
+      internalID: -4720207586281069205
       vertices: []
       indices: 
       edges: []
@@ -290,7 +296,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 4f487a10889356c40800000000000000
-      internalID: 5504869375836390644
+      internalID: 5794084577837416518
       vertices: []
       indices: 
       edges: []
@@ -311,7 +317,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 1f2f6ec928e867350800000000000000
-      internalID: 6014151044029149937
+      internalID: -8284196541439520586
       vertices: []
       indices: 
       edges: []
@@ -332,7 +338,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: bb9461e6ccd7da700800000000000000
-      internalID: 553236646210193851
+      internalID: 8362228628106743963
       vertices: []
       indices: 
       edges: []
@@ -353,7 +359,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 2dcca2a1f3caec7a0800000000000000
-      internalID: -6354952637151261486
+      internalID: -4414936469005285198
       vertices: []
       indices: 
       edges: []
@@ -374,7 +380,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 3a3c62776cbcb7090800000000000000
-      internalID: -8035605056849525853
+      internalID: -7998754523099923892
       vertices: []
       indices: 
       edges: []
@@ -395,7 +401,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 224ce55a4d2bc36d0800000000000000
-      internalID: -3009333824613071838
+      internalID: 8093849176566615970
       vertices: []
       indices: 
       edges: []
@@ -416,7 +422,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: d16c2891d6fbf0af0800000000000000
-      internalID: -427912964276566499
+      internalID: -2765144322820945585
       vertices: []
       indices: 
       edges: []
@@ -437,7 +443,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 11e8f8bc8387c9cf0800000000000000
-      internalID: -244188094456164847
+      internalID: 7575877843770283232
       vertices: []
       indices: 
       edges: []
@@ -458,7 +464,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: ede21d8fc6bbbfb40800000000000000
-      internalID: 5475175848704290526
+      internalID: 2096596902820649965
       vertices: []
       indices: 
       edges: []
@@ -479,7 +485,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 1cf7c7256b2d6dca0800000000000000
-      internalID: -5992370573660094527
+      internalID: -6183917257814484318
       vertices: []
       indices: 
       edges: []
@@ -500,7 +506,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: e837cc792870ac470800000000000000
-      internalID: 8415547111169094542
+      internalID: 5251308004349876393
       vertices: []
       indices: 
       edges: []
@@ -521,7 +527,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 4ffe8c74ac66f6320800000000000000
-      internalID: 2553372532716138484
+      internalID: 6757581672438303349
       vertices: []
       indices: 
       edges: []
@@ -542,7 +548,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: a07521bb18e1d5530800000000000000
-      internalID: 3845263199382427402
+      internalID: -9219786058963254378
       vertices: []
       indices: 
       edges: []
@@ -563,7 +569,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 63f4377799f97e760800000000000000
-      internalID: 7487128387009597238
+      internalID: 4373993206826969785
       vertices: []
       indices: 
       edges: []
@@ -584,7 +590,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: ae593fdf94d694830800000000000000
-      internalID: 4055893103984481770
+      internalID: -3292598272539947573
       vertices: []
       indices: 
       edges: []
@@ -935,6 +941,39 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      juli_faces_12: 6757581672438303349
+      juli_faces_6: 8093849176566615970
+      juli_faces_17: -123022405924032993
+      juli_faces_21: -712118440626307119
+      juli_faces_10: -6183917257814484318
+      juli_faces_2: -8284196541439520586
+      juli_faces_13: -9219786058963254378
+      juli_faces_9: 2096596902820649965
+      juli_faces_3: 8362228628106743963
+      juli_faces_1: 5794084577837416518
+      juli_faces_28: 5642553700127322351
+      juli_faces_15: -3292598272539947573
+      juli_faces_24: -2608502448495724880
+      juli_faces_0: -4720207586281069205
+      juli_faces_23: 8714792249308953788
+      juli_faces_19: -1944227552544870822
+      juli_faces_29: -1966988737650736772
+      juli_faces_27: -1000440707326141615
+      juli_faces_8: 7575877843770283232
+      juli_faces_26: -459092175609914232
+      juli_faces_25: -5324668007049070991
+      juli_faces_30: 9186248965496540148
+      juli_faces_31: -6640242948295555814
+      juli_faces_7: -2765144322820945585
+      juli_faces_18: -3967604689611952412
+      juli_faces_11: 5251308004349876393
+      juli_faces_16: 6588268361778020400
+      juli_faces_4: -4414936469005285198
+      juli_faces_5: -7998754523099923892
+      juli_faces_20: -5979806790235782970
+      juli_faces_22: 2172483654160715664
+      juli_faces_14: 4373993206826969785
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
