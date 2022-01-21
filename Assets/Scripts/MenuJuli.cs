@@ -38,27 +38,33 @@ public class MenuJuli : MonoBehaviour
     void Update()
     {
         aniTimer+=Time.deltaTime;
-        if (aniTimer>30){
+        if (aniTimer>10){
             int choice=Random.Range(0,3);
             switch(choice)
             {
                 case 0:
-                faceAni.SetBool("gum",true);
-                faceAni.SetBool("bored",false);
-                faceAni.SetBool("thinking",false);
+                    faceAni.SetBool("gum",true);
+                    faceAni.SetBool("bored",false);
+                    faceAni.SetBool("thinking",false);
+                    aniTimer = -10f;
                 break;
                 case 1:
-                faceAni.SetBool("gum",false);
-                faceAni.SetBool("bored",true);
-                faceAni.SetBool("thinking",false);
+                    faceAni.SetBool("gum",false);
+                    faceAni.SetBool("bored",true);
+                    faceAni.SetBool("thinking",false);
+                    aniTimer = 5f;
                 break;
                 case 2:
-                faceAni.SetBool("gum",false);
-                faceAni.SetBool("bored",false);
-                faceAni.SetBool("thinking",true);
+                    faceAni.SetBool("gum",false);
+                    faceAni.SetBool("bored",false);
+                    faceAni.SetBool("thinking",true);
+                    aniTimer = 0f;
                 break;
             }
-            aniTimer=20f;
+            //Debug.Log(aniTimer);
+            //Debug.Log(faceAni.GetBool("gum"));
+            //Debug.Log(faceAni.GetBool("bored"));
+            //Debug.Log(faceAni.GetBool("thinking"));    
         }
     }
     void FixedUpdate()
